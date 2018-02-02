@@ -1,0 +1,15 @@
+/*
+Theme Name: QuCreative
+Theme URI: http://creativewpthemes.net/main-demo
+Author: ANTFARM THEMES
+Author URI: https://themeforest.net/user/ant_farm
+Description: From fully customizable typography, to fully customizable layout design, from fully customizable elements and pages, to never before seen visual FX, Qu is a new beginning in WordPress themes.
+Version: 1.06
+License: GPL for PHP, All Right Reserved for Javascript, CSS
+License URI: -
+Tags: right-sidebar, custom-colors, custom-header, featured-images
+Text Domain: qucreative
+*/
+.bypostauthor{
+    border: 1px solid rgba(0,0,0,0.1);
+}

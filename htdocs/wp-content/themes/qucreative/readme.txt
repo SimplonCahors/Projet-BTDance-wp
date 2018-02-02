@@ -1,0 +1,1 @@
+QuCreative theme - documentation in the package

@@ -1,0 +1,17 @@
+html #wpadminbar {
+  display: none; }
+
+html #adminmenuwrap {
+  display: none; }
+
+html #adminmenuback {
+  display: none; }
+
+html #wpcontent {
+  margin-left: 10px;
+  margin-right: 30px; }
+
+#wpfooter p {
+  display: none; }
+
+/*# sourceMappingURL=remove_wp_dashboard_frames.css.map */

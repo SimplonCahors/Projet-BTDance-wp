@@ -1,0 +1,273 @@
+/*
+ * Author: Digital Zoom Studio
+ * Website: http://digitalzoomstudio.net/
+ * Portfolio: http://codecanyon.net/user/ZoomIt/portfolio
+ *
+ * Version: 5.01
+ */
+/*functional styling*/
+.scroller-con {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  opacity: 0;
+  transition-property: opacity, visibility, top;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-out;
+  -moz-transition-property: opacity, visibility, top;
+  -moz-transition-duration: 0.7s;
+  -moz-transition-timing-function: ease-out;
+  -webkit-transition-property: opacity, visibility, top;
+  -webkit-transition-duration: 0.7s;
+  -webkit-transition-timing-function: ease-out;
+  -o-transition-property: opacity, visibility, top;
+  -o-transition-duration: 0.7s;
+  -o-transition-timing-function: ease-out;
+  -ms-transition-property: opacity, visibility, top;
+  -ms-transition-duration: 0.7s;
+  -ms-transition-timing-function: ease-out; }
+  .scroller-con .scroller {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+    .scroller-con .scroller .inner {
+      position: absolute !important; }
+    .scroller-con .scroller .real-inner {
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .scroller-con .scrollbar .scrollbary.animatetoptoo {
+    transition-property: opacity, visibility, top;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    -moz-transition-property: opacity, visibility, top;
+    -moz-transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-out;
+    -webkit-transition-property: opacity, visibility, top;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-property: opacity, visibility, top;
+    -o-transition-duration: 0.3s;
+    -o-transition-timing-function: ease-out;
+    -ms-transition-property: opacity, visibility, top;
+    -ms-transition-duration: 0.3s;
+    -ms-transition-timing-function: ease-out; }
+  .scroller-con .scroller::-webkit-scrollbar {
+    display: none; }
+  .scroller-con .scrollbary {
+    position: absolute;
+    cursor: pointer; }
+  .scroller-con .scrollbary_bg {
+    position: absolute;
+    cursor: pointer; }
+  .scroller-con .scrollbarx {
+    position: absolute;
+    cursor: pointer; }
+  .scroller-con .scrollbarx_bg {
+    position: absolute;
+    cursor: pointer; }
+  .scroller-con .inner {
+    width: 100%; }
+
+.scroller-con.inner-relative {
+  position: relative; }
+  .scroller-con.inner-relative .scroller {
+    position: relative; }
+  .scroller-con.inner-relative .scroller .inner {
+    position: relative !important;
+    display: inline-block;
+    width: auto; }
+
+.scroller-con.safe {
+  opacity: 1; }
+
+.scroller-con.type-scrollTop {
+  overflow: hidden;
+  height: auto;
+  min-height: 200px; }
+  .scroller-con.type-scrollTop > .scrollbar .scrollbary_bg, .scroller-con.type-scrollTop > .scrollbar .scrollbary {
+    position: fixed; }
+
+.scroller-con.dzsscr-ready {
+  opacity: 1; }
+
+.inner.inner-for-horizontal {
+  white-space: nowrap;
+  width: auto; }
+  .inner.inner-for-horizontal > img {
+    max-width: none; }
+
+.scroller-con.auto-height {
+  height: auto; }
+  .scroller-con.auto-height .scroller {
+    position: relative;
+    height: auto; }
+    .scroller-con.auto-height .scroller .inner {
+      position: relative !important;
+      display: inline-block; }
+    .scroller-con.auto-height .scroller .real-inner {
+      position: relative;
+      top: 0;
+      left: 0; }
+  .scroller-con.auto-height .scroller::-webkit-scrollbar {
+    display: none; }
+
+.scroller-con.overflow-visible .scroller {
+  overflow: visible; }
+
+.scroller-con.overflow-x-visible .scroller {
+  overflow: visible;
+  overflow-y: hidden;
+  overflow-x: visible; }
+
+.scroller-con.swipe-enabled {
+  cursor: move;
+  cursor: -moz-grab;
+  cursor: grab;
+  cursor: url(styleimg/openhand.cur) 4 4, move; }
+
+.scroller-con.swipe-enabled.closedhand {
+  cursor: url(styleimg/closedhand.cur) 4 4, move; }
+
+/*estethic styling*/
+/* skin_default */
+.scroller-con.dir-ver .scroller {
+  width: calc(100% - 16px); }
+
+.scroller-con.skin_apple.dir-ver .scroller {
+  width: 100%; }
+
+.scroller-con.skin_apple > .scrollbar > .scrollbarx {
+  width: 90px;
+  height: 8px;
+  left: 0;
+  bottom: -15px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px; }
+.scroller-con.skin_apple > .scrollbar > .scrollbarx_bg {
+  height: 0px; }
+.scroller-con.skin_apple > .scrollbar > .scrollbary {
+  width: 8px;
+  height: 90px;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px; }
+.scroller-con.skin_apple > .scrollbar > .scrollbary_bg {
+  width: 8px;
+  right: 0;
+  background: rgba(255, 255, 255, 0);
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  -moz-transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-timing-function: ease-out;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  -o-transition-property: all;
+  -o-transition-duration: 0.3s;
+  -o-transition-timing-function: ease-out;
+  -ms-transition-property: all;
+  -ms-transition-duration: 0.3s;
+  -ms-transition-timing-function: ease-out; }
+.scroller-con.skin_apple > .scrollbar:hover .scrollbary_bg, .scroller-con.skin_apple > .scrollbar.dragging .scrollbary_bg {
+  background: rgba(255, 255, 255, 0.3); }
+
+/*======skin apple*/
+.scroller-con.place-scrollbar-left .scrollbary, .scroller-con.place-scrollbar-left .scrollbary_bg {
+  left: auto;
+  right: 100%; }
+
+body.scroller-con {
+  overflow: hidden !important;
+  margin-top: 0 !important; }
+
+body.scroller-con .inner {
+  width: 100%; }
+
+body.scroller-con.skin_blackwhite .scrollbary {
+  right: 0; }
+
+body.scroller-con.skin_blackwhite .scrollbary_bg {
+  right: 5px; }
+
+.gallery-items .dzsscr-gallery-item {
+  display: block;
+  max-width: none; }
+
+.horizontal-container {
+  white-space: nowrap; }
+
+.gallery-items.skin-viva .dzsscr-gallery-item {
+  display: block;
+  background-color: #928E8A;
+  padding: 10px;
+  position: relative;
+  font-size: 0;
+  width: 100%;
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  -moz-transition-property: background;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-timing-function: ease-out;
+  -webkit-transition-property: background;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  -o-transition-property: background;
+  -o-transition-duration: 0.3s;
+  -o-transition-timing-function: ease-out;
+  -ms-transition-property: background;
+  -ms-transition-duration: 0.3s;
+  -ms-transition-timing-function: ease-out; }
+.gallery-items.skin-viva .dzsscr-gallery-item:hover, .gallery-items.skin-viva .dzsscr-gallery-item.active {
+  background-color: #706c68; }
+.gallery-items.skin-viva .the-thumb {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  border: 3px solid #444444;
+  background-size: cover;
+  background-position: center center; }
+.gallery-items.skin-viva .the-meta {
+  color: #ffffff;
+  width: calc(100% - 81px);
+  display: inline-block;
+  vertical-align: middle; }
+  .gallery-items.skin-viva .the-meta .the-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  .gallery-items.skin-viva .the-meta .the-desc {
+    font-size: 13px;
+    line-height: 1.5; }
+
+.gallery-items.horizontal-container .dzsscr-gallery-item {
+  display: inline-block;
+  white-space: normal; }
+
+.full-horizontal .inner {
+  white-space: nowrap; }
+  .full-horizontal .inner > img {
+    display: inline-block;
+    max-width: none; }
+
+.fullwidth {
+  width: 100%; }
+
+.fullheight {
+  height: 100%; }
+
+/*# sourceMappingURL=scroller.css.map */

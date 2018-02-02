@@ -1,0 +1,425 @@
+/*
+ * Author: Digital Zoom Studio
+ * Website: http://digitalzoomstudio.net/
+ * Portfolio: http://codecanyon.net/user/ZoomIt/portfolio
+ *
+ * Version: 5.01
+ */
+
+
+@mixin animation($transition-property, $transition-duration, $transition-timing) {
+transition-property: $transition-property;transition-duration: $transition-duration;transition-timing-function: $transition-timing;-moz-transition-property:$transition-property;-moz-transition-duration: $transition-duration;-moz-transition-timing-function:$transition-timing;-webkit-transition-property:$transition-property;-webkit-transition-duration: $transition-duration;-webkit-transition-timing-function:$transition-timing;-o-transition-property:$transition-property;-o-transition-duration: $transition-duration;-o-transition-timing-function:$transition-timing;-ms-transition-property:$transition-property;
+-ms-transition-duration: $transition-duration;-ms-transition-timing-function:$transition-timing;
+}
+@mixin boxsizing() {
+-moz-box-sizing:    border-box;   -webkit-box-sizing: border-box;    box-sizing:        border-box;
+}
+
+$transition-property: all;
+$transition-duration: 0.3s;
+$transition-timing: ease-out;
+$classmain : ".scroller-con";
+
+/*functional styling*/
+.scroller-con{
+  position: relative;
+  width: 100%;
+  height:200px;
+
+
+  opacity:0;
+
+
+  $transition-property: opacity,visibility,top;
+  $transition-duration: 0.7s;
+  $transition-timing: ease-out;
+  @include animation($transition-property, $transition-duration, $transition-timing);
+
+  .scroller{
+    overflow: hidden;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    .inner{
+      position: absolute!important;
+    }
+    .real-inner{
+      position: absolute;
+      top:0;
+      left:0;
+    }
+  }
+
+  .scrollbary{
+
+  }
+
+  .scrollbar{
+
+    .scrollbary.animatetoptoo {
+
+      $transition-property: opacity,visibility,top;
+      $transition-duration: 0.3s;
+      $transition-timing: ease-out;
+      @include animation($transition-property, $transition-duration, $transition-timing)
+
+    }
+  }
+
+  .scroller::-webkit-scrollbar {
+    display:none;
+  }
+
+
+
+   .scrollbary{
+    position: absolute;
+    cursor: pointer;
+  }
+
+   .scrollbary_bg{
+    position: absolute;
+    cursor: pointer;
+  }
+
+
+
+   .scrollbarx{
+    position: absolute;
+    cursor: pointer;
+  }
+
+   .scrollbarx_bg{
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .inner{
+    width: 100%;
+  }
+}
+
+.scroller-con.inner-relative{
+  position: relative;
+  .scroller{
+
+    position: relative;
+  }
+  .scroller{
+    .inner{
+      position: relative!important;
+      display: inline-block;
+      width: auto;
+    }
+  }
+}
+
+.scroller-con.safe{
+  opacity:1;
+}
+
+.scroller-con.type-scrollTop{
+  overflow:hidden;
+  height: auto;
+
+  min-height: 200px;
+
+  >.scrollbar{
+    .scrollbary_bg, .scrollbary{
+      position: fixed;
+    }
+  }
+
+
+}
+
+
+.scroller-con.dzsscr-ready{
+  opacity:1;
+}
+
+
+
+.inner.inner-for-horizontal{
+  white-space: nowrap;
+  width: auto;
+
+  >img{
+    max-width: none;
+  }
+}
+
+.scroller-con.auto-height{
+  height: auto;
+  .scroller{
+    position: relative;
+    height: auto;
+    .inner{
+      position: relative!important;
+      display: inline-block;;
+    }
+    .real-inner{
+      position: relative;
+      top:0;
+      left:0;
+    }
+  }
+
+  .scroller::-webkit-scrollbar {display:none;}
+}
+
+.scroller-con.overflow-visible{
+  .scroller{
+    overflow: visible;
+    .inner{
+    }
+    .real-inner{
+    }
+  }
+
+}
+.scroller-con.overflow-x-visible{
+  .scroller{
+    overflow:visible;
+    overflow-y: hidden;
+    overflow-x: visible;
+    .inner{
+    }
+    .real-inner{
+    }
+  }
+
+}
+
+
+
+
+.scroller-con.swipe-enabled{
+  cursor: move;
+  cursor: -moz-grab;
+  cursor: grab;
+  cursor: url(styleimg/openhand.cur) 4 4, move;
+}
+
+.scroller-con.swipe-enabled.closedhand {
+  cursor: url(styleimg/closedhand.cur) 4 4, move;
+}
+
+
+
+
+
+/*estethic styling*/
+
+/* skin_default */
+
+
+
+
+.scroller-con.dir-ver{
+  .scroller{
+    width: calc(100% - 16px);
+  }
+
+}
+
+.scroller-con.skin_apple.dir-ver{
+  .scroller{
+    width: 100%;
+  }
+
+}
+
+
+
+.scroller-con.skin_apple{
+
+  >.scrollbar{
+    >.scrollbarx{
+
+      width: 90px;
+      height: 8px;
+      left: 0;
+      bottom: -15px;
+      background:rgba(0,0,0,0.5);
+      border-radius:10px;
+    }
+    >.scrollbarx_bg{
+      height: 0px;
+    }
+
+    >.scrollbary{
+      width: 8px;
+      height: 90px;
+      top: 0;
+
+      background:rgba(0,0,0,0.5);
+      border-radius:10px;
+    }
+
+    >.scrollbary_bg{
+      width: 8px;
+      right:0;
+      background: rgba(255,255,255,0);
+
+      $transition-property: all;
+      $transition-duration: 0.3s;
+      $transition-timing: ease-out;
+      @include animation($transition-property, $transition-duration, $transition-timing)
+    }
+
+  }
+
+  >.scrollbar:hover .scrollbary_bg,>.scrollbar.dragging .scrollbary_bg{
+    background: rgba(255,255,255,0.3);
+  }
+}
+
+
+$classmain : ".scroller-con.skin_apple";
+
+
+/*======skin apple*/
+
+
+.scroller-con.place-scrollbar-left{
+  .scrollbary, .scrollbary_bg{
+    left: auto;
+    right: 100%;
+  }
+
+
+}
+
+
+
+body.scroller-con{ overflow:hidden!important; margin-top:0!important;
+}
+body.scroller-con .inner{ width:100%;
+}
+body.scroller-con.skin_blackwhite .scrollbary{ right:0;
+}
+body.scroller-con.skin_blackwhite .scrollbary_bg{ right:5px;
+}
+
+
+.gallery-items{
+  .dzsscr-gallery-item{
+    display: block;
+    max-width: none;
+  }
+}
+
+.horizontal-container{
+  white-space: nowrap;
+}
+.gallery-items.skin-viva{
+
+  $padding: 10px;
+  $thumb-size: 70px;
+  .dzsscr-gallery-item{
+
+    display: block;
+    background-color: #928E8A;
+
+    padding: $padding;
+
+    position: relative;
+
+    font-size:0;
+
+
+    width: 100%;
+
+    $transition-property: background;
+    $transition-duration: 0.3s;
+    $transition-timing: ease-out;
+    @include animation($transition-property, $transition-duration, $transition-timing)
+  }
+
+  .dzsscr-gallery-item:hover,.dzsscr-gallery-item.active{
+
+    background-color: #706c68;
+  }
+
+
+  .the-thumb{
+    width: $thumb-size;
+    height: $thumb-size;
+
+    position: relative;
+
+    display: inline-block;
+
+    vertical-align: middle;
+
+    //top: $padding; left:$padding;
+    margin-right: $padding;
+
+    border: 3px solid #444444;
+
+    background-size: cover;
+
+    background-position: center center;
+
+  }
+
+  .the-meta{
+    $w: ($thumb-size + $padding + 1);
+
+    color: #ffffff;
+
+
+    width: calc(100% - #{$w});
+    display: inline-block;
+
+    vertical-align: middle;
+
+
+    .the-title{
+      font-size: 16px;
+
+
+      text-transform: uppercase;
+
+      line-height: 1;
+      margin-bottom: 5px;
+
+      font-weight: bold;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .the-desc{
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  }
+}
+
+
+.gallery-items.horizontal-container{
+  .dzsscr-gallery-item{
+    display: inline-block;
+    white-space: normal;
+  }
+}
+
+.full-horizontal{
+  .inner{
+    white-space: nowrap;
+
+    >img{
+      display: inline-block;
+      max-width: none;
+    }
+  }
+}
+
+
+
+
+.fullwidth{ width:100%; }
+.fullheight{ height:100%; }

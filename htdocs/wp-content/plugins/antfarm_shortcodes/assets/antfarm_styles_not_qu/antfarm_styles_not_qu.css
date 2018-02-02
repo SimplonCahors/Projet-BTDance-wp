@@ -1,0 +1,38 @@
+a:focus {
+  color: inherit;
+  outline: none;
+  box-shadow: none; }
+
+.form-feedback {
+  display: none; }
+
+.cat-name {
+  display: inline-block; }
+
+.the-count {
+  display: inline-block; }
+
+.cat-name + .the-count {
+  margin-left: 7px; }
+
+.social-icon {
+  display: inline-block;
+  margin-right: 10px; }
+
+.btn-full-red {
+  text-align: center;
+  color: #FFFFFF;
+  padding: 10px;
+  display: block;
+  background-color: #97c1cf;
+  border: 0;
+  width: 100%;
+  font-weight: bold;
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out; }
+
+body .btn-full-red:hover {
+  background-color: #222222; }
+
+/*# sourceMappingURL=antfarm_styles_not_qu.css.map */
