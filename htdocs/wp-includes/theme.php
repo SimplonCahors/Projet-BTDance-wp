@@ -870,7 +870,7 @@ function get_theme_mod( $name, $default = false ) {
 	}
 
 	if ( is_string( $default ) )
-		$default = sprintf( $default, get_template_directory_uri(), get_stylesheet_directory_uri() );
+		$default = @sprintf( $default, get_template_directory_uri(), get_stylesheet_directory_uri() );
 
 	/** This filter is documented in wp-includes/theme.php */
 	return apply_filters( "theme_mod_{$name}", $default );
