@@ -14,3 +14,8 @@ Text Domain: qucreative-child
 
 
 @import url("../qucreative/style.css");
+
+
+/*projects colors*/
+html body div.active[data-termid*="8"] {background-color: yellow !important;}
+html body div[data-termid*="8"]:hover {background-color: yellow !important;}
