@@ -4,16 +4,23 @@ body {
 }
 
 h2 {
-
-        margin-top: 60px;       
+        margin-top: 60px;
 }
 
 ul {
         margin-left: 20px;
 }
+
 img {
-        margin-top : 5px;
-        margin-bottom : 30px;
-max-width: 90vw; 
+        margin-top: 5px;
+        margin-bottom: 30px;
+        max-width: 90vw;
 }
 
+.strong {
+        font-weight: bold;
+}
+
+.red {
+        color: white;
+}
