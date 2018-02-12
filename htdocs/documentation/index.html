@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="robots" content="noindex,nofollow">
 	<title>Documentation</title>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -24,9 +25,19 @@
 			<li>
 				<a href="#introduction"> Introduction</a>
 			</li>
+
 			<li>
-				<a href="#slider"> Home : Modify the slider</a>
+				<ul>
+					<a href="#home"> Home :</a>
+					<li>
+						<a href="#slider"> Modify the slider</a>
+					</li>
+					<li>
+						<a href="#news"> Add news</a>
+					</li>
+				</ul>
 			</li>
+
 
 			<li>
 				<a href="#press">Press: Add a new excerpt</a>
@@ -41,40 +52,61 @@
 
 		<p>
 			To modify anything, you first need to be logged in. In order to do so go to btdanceproject.com/wp-admin
-
 		</p>
 
+		<p> When modifying things like a page, a post, a portfolio item, you'll be able to either preview or update it. We advice to
+			always preview it before publishing, because you can always leave the page without saving when you don't want to keep
+			your changes. When you update it, it's saved and live. </p>
 
 
-		<h2 id="slider">Modifying The Slider </h2>
+
+		<h2 id="home">Home :</h2>
+		<p> Slider : You can change the images.</p>
+		<p>Breaking news : You can change the text and if there's a button with a link or not. </p>
+		<p>Performance Works: Automatically display the most recent project.</p>
+		<p>Funding support: Is set. </p>
+
+		<h3 id="slider">Modifying The Slider </h3>
 
 		<p>
 			First, you need to be on your Home page and logged in. In the Wordpress command bar, go in Slider Revolution -> Home Slider.
 			<img src="images/modify_slider.png" alt="">
-
-
 		</p>
 
 		<p>
 			You land on a page where these are your slides :
 			<img src="images/slider_slides.png" alt="">
-
 		</p>
 
 
-		<p>Click on the picture of the slide you want to modify
-
+		<p>Click on the picture of the slide you want to modify.
 		</p>
+
 		<p>In the menu under it you have your main image :
 			<img src="images/slider_image.png" alt="">
 		</p>
-		<p> Click on "Media library" and either select your picture that's in the wordpress library or upload files.
 
+		<p> Click on "Media library" and either select your picture that's in the wordpress library or upload files.
 		</p>
+
 		<p> You need to save for each slide you modify, the button is in the top right corner.
 		</p>
 
 
+		<h3 id="news">Home: Add news</h3>
+
+		<p>
+			First, you need to be on your Home page and logged in. In the Wordpress command bar, go in +Edit page. In the WPBakery Page
+			Builder this are your news :
+			<img src="images/news_home.png" alt=""> Click on the edit button on the one you want to modify and change it's content.
+		</p>
+		<h5>If you want to add or delete a button :</h5>
+		A button needs three fields : a Read More text, Read More Link, and a button style. Simply fill them or empty them if you want or not a button. 
+<br>
+		The Read more Text is always "READ MORE" and the button style is always : " {"style":"style-hallowred","padding":"padding-small","rounded":""} ".
+		<p>
+
+		</p>
 		<h2 id="press">Press: Add a new excerpt</h2>
 
 		<p>
@@ -83,10 +115,16 @@
 		</p>
 
 		<p>
-				You land on a page where all the "QuCreative - Call to action" are your excerpts. You can hover on one to acces it's own menu, and duplicate it. 
-				
-				<img src="images/press_ex.png" alt="">
-			</p>
+			You land on a page where all the "QuCreative - Call to action" are your excerpts.The idea is to duplicate one of the other
+			excerpts and modify its text. So you can hover onto one to access it's own menu, and duplicate it.
+			<img src="images/press_ex.png" alt=""> You can drag and drop it if you want you move it, but make sure to respect the same structure. It's safer not to move
+			them, and so to duplicate one just below the place you want to add a new one.
+
+		</p>
+		<p>
+			Then on the one you want to modify, you can click it's edit button and modify the title, content, and Read More Link fields
+			as the previous one. Then save your item, preview your page, and save it.
+		</p>
 
 	</main>
 	<!-- Compiled and minified JavaScript -->
@@ -94,3 +132,18 @@
 </body>
 
 </html>
+
+
+/**/
+div.active[data-termid*="8"] {background-color: yellow !important;}
+div[data-termid*="8"]:hover {background-color: yellow !important;}
+
+
+
+/*projects colors*/
+html body div.active[data-termid*="8"] {background-color: yellow !important;}
+html body div[data-termid*="8"]:hover {background-color: yellow !important;}
+
+
+.bullet-feature-form.form-hexagon .icon-con::after, .selector-con.selector-con-for-skin-melbourne .categories .a-category::before, .main-container .the-content-con.fullit .zfolio.skin-silver .selector-con .categories .a-category::before, .main-container .the-content-con.fullit .zfolio.skin-melbourne .selector-con .categories .a-category::before, body .dzs-tabs.skin-menu .tabs-menu .tab-menu-con::before	.a-category:hover
+

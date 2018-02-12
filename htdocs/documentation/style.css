@@ -3,6 +3,14 @@ body {
         margin: 0 7%;
 }
 
+h2 {
+
+        margin-top: 60px;       
+}
+
+ul {
+        margin-left: 20px;
+}
 img {
         margin-top : 5px;
         margin-bottom : 30px;
